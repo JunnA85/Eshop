@@ -1,0 +1,17 @@
+﻿@model Article
+@{ Layout = "~/Views/Shared/_PageLayout.cshtml"; }
+
+<div class="d-flex justify-content-center">
+    <a asp-controller="Articles" asp-action="Index" asp-route-id=""> <button type="button" class="btn btn-dark">Zpět</button> </a>
+    <figure>
+        <img src="/@Model.img" />
+        <figcaption>
+            <br />
+            <hr />
+            @Model.blog
+            <hr />
+            @Model.author
+            @Model.sentTime
+        </figcaption>
+    </figure>
+</div>

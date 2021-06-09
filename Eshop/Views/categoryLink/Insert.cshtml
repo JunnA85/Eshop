@@ -1,0 +1,25 @@
+﻿@model categoryLink
+<h1 class="text-center">Add</h1>
+
+<h4 class="text-center">categoryLink</h4>
+<hr />
+<div class="d-flex justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Insert">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CatID" class="control-label"></label>
+                <input asp-for="CatID" class="form-control" />
+                <span asp-validation-for="CatID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductID" class="control-label"></label>
+                <input asp-for="ProductID" class="form-control" />
+                <span asp-validation-for="ProductID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

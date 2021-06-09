@@ -1,0 +1,64 @@
+﻿@model Message
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kontakt</title>
+</head>
+<body>
+    <div class="flex-container">
+        <fieldset class="left">
+            <h2 style="font-weight:lighter">Tell Us Your Message</h2>
+            <form asp-controller="Message" asp-action="Insert">
+                <div class="inputs">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <label asp-for="name" class="smallTitles"> Your name </label><br />
+                    <input style="width: 50%; height:45px" asp-for="name" /><br />
+
+
+                    <label asp-for="sender" class="smallTitles"> Your email </label><br />
+                    <input style="width: 50%; height:45px" asp-for="sender" /><br/>
+
+
+                    <label asp-for="subject" class="smallTitles"> Subject </label><br />
+                    <input style="width: 50%; height:45px" asp-for="subject" /><br />
+
+                    <label asp-for="content" class="smallTitles"> Message </label><br />
+                    <textarea style="width: 50%; height:90px" asp-for="content"> Enter your message here </textarea> <br />
+
+                    <input asp-for="sentTime" value=@DateTime.Now hidden />
+
+                </div>
+                    <input style="border:none; color:white; background-color:pink;" type="submit" value="Send Message" class="btn btn-primary" />
+            </form>
+        </fieldset>
+
+        <div class="right" style="background-color:#f2f2f2">
+            <address>
+                <h2>Contact Us</h2>
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.<br />
+                Curabitur ut enim elementum,
+                fringilla nibh sed,
+                fermentum purus.<br />
+                Ut vitae leo ac dui faucibus egestas.
+                Praesent eget leo maximus,
+                viverra quam sit amet.
+                <h5> Address </h5>
+                123 Main Street, Anytown, CA 12345 - USA
+                <hr />
+                <h5>Phone</h5>
+                Mobile: (08) 123 456 789<br />
+                Hotline: 1009 678 456
+                <hr />
+                <h5>Email</h5>
+                yourmail@domain.com<br />
+                mail@yourmail.com
+            </address>
+        </div>
+    </div>
+
+    <img class="stretch" src="~/pictures/Googlemaps.png" alt="GoogleMapy">
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model categoryLink
+
+<body>
+    <h1> Categories </h1>
+
+
+    @foreach (categoryLink item in ViewBag.Link)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th> @item.CatID</th>
+                    <th> @item.ProductID</th>
+                </tr>
+            </thead>
+        </table>
+    }
+</body>

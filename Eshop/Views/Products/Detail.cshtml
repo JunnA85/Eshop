@@ -1,0 +1,75 @@
+﻿@model Product
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ProductDetail</title>
+</head>
+<body>
+    <div class="ProductDetailFlex">
+        <div class="ProductDetail">
+            <div class="ProductName">
+                <h3>@Model.name</h3>
+            </div>
+            <img src="~/pics/5stars.png" alt="Alternate Text" />
+            <div class="ProductDetailPrice">
+                <h2>$@Model.price</h2>
+            </div>
+            <p>
+                Vendor: <span style="font-weight:bold" class="ProductDetailPink">@Model.vendor</span> <br />
+                SKU: <span class="ProductDetailPink">101</span><br />
+                Availability: <span class="ProductDetailPink">In Stock</span><br />
+            </p>
+            <hr />
+            <p>
+                On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure.
+            </p>
+            <hr />
+            <div class="ProductDetailQty">
+                <h7>
+                    Qty <input type="number" /> <button type="submit">Add to cart</button>
+                </h7>
+            </div>
+            <br />
+            <div class="ProductDetailBuyIt">
+                <button type="submit">Buy it now</button>
+            </div>
+            <br />
+            <h8>Compare this product   Add to wishlist</h8>
+            <h4>SHARE THIS PRODUCT:</h4>
+            <div class="ProductDetailLogos">
+                <img src="~/pics/ProductDetailLogos.png" alt="Logos" />
+            </div>
+            <div class="ProductDetailCards">
+                <h4>GURANTEED CHECKOUT:</h4>
+                <img src="~/pics/Cards.png" alt="Payment methods" />
+            </div>
+        </div>
+        <div class="ProductDetailPhoto">
+            <img src="@Model.firstImage" alt="Alternate Text" />
+        </div>
+
+    </div>
+    <div class="others">
+        <div class="others-part">
+            <u class="others-u">Description</u>
+        </div>
+        <div class="others-part">
+            Reviews
+        </div>
+        <div class="others-part">
+            Comments
+        </div>
+        <div class="others-part">
+            Shipping Policy
+        </div>
+        <div class="others-part">
+            Size Chart
+        </div>    
+    </div>
+    <hr />
+    <div>
+        <p>@Model.description</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+﻿
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Eshop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="top">
+            <p class="FollowUS">
+                Follow Us: <img src="~/pics/SocialSites.png" alt="SocialSites" />
+                <a class="admin" asp-controller="Admin" asp-action="Login"> Admin </a>
+            </p>
+        </div>
+
+        <nav>
+            <div class="Searchbar">
+                <h2 class="DebraTitle">DEBRA</h2>
+                <div class="flex-container">
+                    <input type="text" placeholder=" Search Our Store">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
+            <div class="custom-navbar">
+                <div class="custom-dropdown">
+                        <a asp-controller="Home" asp-action="Index"> Home </a>
+                        <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div class="custom-dropdown">
+                        <a>Shop</a>
+                        <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div class="custom-dropdown">
+                        <a asp-controller="Products" asp-action="Index">Products</a>
+                        <i class="fa fa-caret-down"></i>
+                </div>
+
+                <div class="custom-dropdown">
+                        <a asp-controller="Articles" asp-action="Index">Blog</a>
+                        <i class="fa fa-caret-down"></i>
+                </div>
+                <a asp-controller="Home" asp-action="AboutUs">About</a>
+                <a asp-controller="Home" asp-action="ContactUs">Contact</a>
+            </div>
+        </nav>
+        <img class="stretch" src="~/pics/Backround.png" alt="Backround photo" />
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div>
+            <h1 style="font-weight:lighter">DEBRA</h1>
+            <address>
+                <h5>Address:</h5>
+                <p>4710-4890 Breckinridge St, UK Burlingtion, VT 05401</p>
+                <h5>Need Help ?</h5>
+                <p>Call: 1-800-345-6789</p>
+                <h5>Email:</h5>
+                <p>example@example.com</p>
+            </address>
+        </div>
+        <div>
+            <h6>About us</h6>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Store Location</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Orders Tracking</a>
+        </div>
+        <div>
+            <h6>Usefull Links</h6>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Returns</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Support Policy</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Size Guide</a>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">FAQs</a>
+        </div>
+        <div>
+            <h6>Latest Blogs</h6>
+            <img src="~/pics/GuyWithGlassesSmall.png" alt="Guy with glasses" />
+            <p>Article</p>
+            <h6>Latest Blogs</h6>
+            <img src="~/pics/GuyWithGlassesSmall.png" alt="Guy with glasses" />
+            <p>Article</p>
+        </div>
+    </footer>
+</body>
+

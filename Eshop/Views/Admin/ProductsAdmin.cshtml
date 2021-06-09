@@ -1,0 +1,28 @@
+﻿@{ Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+<head>
+    <style>
+        th {
+            width: 150px;
+            padding-top: 8%;
+        }
+    </style>
+</head>
+<body>
+    <h1> Products </h1>
+
+    <button type="button" class="btn btn-secondary"> <a asp-controller="Products" asp-action="Insert"> Add </a></button>
+
+    @foreach (Product item in ViewBag.Products)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th> @item.name </th>
+                    <th> <a asp-controller="Products" asp-action="Delete" asp-route-id="@item.id"> Delete </a></th>
+                    <th> <a asp-controller="Products" asp-action="Edit" asp-route-id="@item.id"> Edit </a></th>
+                    <th> <a asp-controller="Admin" asp-action="CategoriesDetail" asp-route-id="@item.id"> Categories </a></th>
+                </tr>
+            </thead>
+        </table>
+    }
+</body>

@@ -1,0 +1,35 @@
+﻿@*@foreach (Product product in ViewBag.Products)
+    {
+
+         class="img-thumbnail img-fluid">
+
+        <a asp-controller="Products" asp-action="Detail" asp-route-id="@product.id"> @product.name </a>
+        <br />
+
+
+    }*@
+
+<div class="custom-top2" >
+    @foreach (Product product in ViewBag.Products)
+    {
+
+        <div class="card" style="width: 18rem;">
+            <div class="ProductComponent">
+                <a asp-controller="Products" asp-action="Detail" asp-route-id="@product.id">
+                    <div class="custom-item-img">
+                        <img src=@product.firstImage alt="Product Photo" />
+                    </div>
+                    <div class="ProductName">
+                        <h5>@product.name</h5>
+                    </div>
+                    <div class="custom-item-rating">
+                        <img src="~/pics/5stars.png" alt="Alternate Text" />
+                    </div>
+                    <div class="ProductPrice">
+                        <h5>$@product.price</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>

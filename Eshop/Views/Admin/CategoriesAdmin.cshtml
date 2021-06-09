@@ -1,0 +1,26 @@
+﻿@{ Layout = "~/Views/Shared/_AdminLayout.cshtml"; }
+<head>
+    <style>
+        th {
+            width: 150px;
+            padding-top: 8%;
+        }
+    </style>
+</head>
+<body>
+    <h1> Categories </h1>
+    <button type="button" class="btn btn-secondary"> <a asp-controller="Category" asp-action="Insert"> Add </a></button>
+
+    @foreach (Category item in ViewBag.Categories)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th> @item.name </th>
+                    <th> <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.id"> Smazat </a></th>
+                    <th> <a asp-controller="Category" asp-action="Edit" asp-route-id="@item.id"> Upravit </a></th>
+                </tr>
+            </thead>
+        </table>
+    }
+</body>

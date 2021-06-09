@@ -1,0 +1,47 @@
+﻿@model Eshop.Models.Product
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<body>
+    <h1 class="text-center">Edit</h1>
+
+    <h4 class="text-center">Product @Model.name</h4>
+    <hr />
+    <div class="d-flex justify-content-center">
+        <div class="col-md-10">
+            <form asp-controller="Products" asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="name" class="control-label"></label>
+                    <input asp-for="name" class="form-control" />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="description" class="control-label"></label>
+                    <input asp-for="description" class="form-control" />
+                    <span asp-validation-for="description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="price" class="control-label"></label>
+                    <input asp-for="price" class="form-control" />
+                    <span asp-validation-for="price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="dph" class="control-label"></label>
+                    <input asp-for="dph" class="form-control" />
+                    <span asp-validation-for="dph" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="number" class="control-label"></label>
+                    <input asp-for="number" class="form-control" />
+                    <span asp-validation-for="number" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>

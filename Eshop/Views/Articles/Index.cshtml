@@ -1,0 +1,17 @@
+﻿@{ Layout = "~/Views/Shared/_PageLayout.cshtml"; }
+
+<div class="Article">
+    @foreach (Article item in ViewBag.Articles)
+    {
+        <img src="@item.img" alt="Articles Image" />
+
+        <h4>@item.title</h4>
+        <div class="ArticleAuthor">
+            <h7>@item.author</h7>
+        </div>
+        <hr />
+        <p>@item.blog.Remove(100)..</p>
+        <a asp-controller="ArticleDetail" asp-action="index" asp-route-id="@item.id">READ MORE</a>
+        <br />
+    }
+</div>
